@@ -1,0 +1,891 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  background: url("N (10).jpg") repeat fixed center;
+    background-size: 100%;
+}
+
+header{
+    font-family: ".VnLucida sans", sans-serif;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .5s;
+  padding: 20px  100px;
+  z-index:1;
+}
+header .jatin2 {
+    opacity: 0;
+    visibility: hidden;
+}
+header.sticky .jatin2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+header.sticky .jatin2 a{
+    font-size: 2.5rem;
+
+    color: #fff;
+    font-family: "Segoe UI Light" , monospace;
+    text-decoration: none;
+    letter-spacing: -2px;
+    font-weight: bolder;
+    position: absolute;
+    transform: translate(-3rem,-1.5rem);
+    text-shadow: 0 10px 20px #2e2e31, 0 20px 40px #2e2e31;
+    z-index: 1;
+    padding: 0;
+}
+.jatin2 a h2 {
+    font-size: 1.5rem;
+    display: inline;
+    letter-spacing: 0;
+}
+
+header.sticky .jatin2 a:before, header.sticky .jatin2 a:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    border: 7px solid red;
+    width: 100%;
+    padding: 2rem .2rem;
+    transform: translate(0 , 0);
+    left:.5rem;
+    top: 1rem;
+    animation:  10s infinite alternate ease-in-out boxmove2;
+}
+header.sticky .jatin2 a:before{
+    border-color: #d9524a #d9524a rgba(0,0,0,0) rgba(0,0,0,0) ;
+    z-index: -1;
+}
+header.sticky .jatin2 a:after {
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) #d9524a #d9524a;
+    box-shadow: 25px 25px 25px  rgba(46, 46, 49, .8);
+}
+@keyframes boxmove2 {
+    0%{
+        transform:   translate(-0.8rem , -1.8rem) rotate(0deg);
+    }
+    100%{
+        transform:  translate(-0.8rem , -1.8rem) rotate(360deg) ;
+    }
+}
+
+ header ul {
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+  display: block;
+  background-color:rgba(0,0,0,.85);
+  text-transform: uppercase;
+  width:80px;
+  height:80px;
+  border:none;
+  border-radius:50%;
+}
+ header ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header ul li:nth-child(1) {
+  font-size:70px;
+  padding: 80px; 
+  left:200px;
+  top:70px;
+  text-shadow: 0 10px 20px #000;
+  box-shadow: 25px 25px 25px  rgba(46, 46, 49, .8);
+}
+header ul li:nth-child(2) {
+  font-size:60px;
+  padding: 50px;  
+  left:170px;
+  top:30px;
+    text-shadow: 0 10px 20px #000;
+    box-shadow: 25px 25px 25px  rgba(46, 46, 49, .8);
+}
+header ul li:nth-child(3) {
+  font-size:70px;
+  padding: 60px;  
+  left:-100px;
+  top:220px;
+    text-shadow: 0 10px 20px #000;
+    box-shadow: 25px 25px 25px  rgba(46, 46, 49, .8);
+}
+header ul li:nth-child(4) {
+  font-size:50px;
+  padding: 40px;  
+  left:-160px;
+  top:180px;
+    text-shadow: 0 10px 20px #000;
+    box-shadow: 25px 25px 25px  rgba(46, 46, 49, .8);
+}
+header ul li:nth-child(5) {
+    font-size:50px;
+    padding: 40px;
+    left:-205px;
+    top:60px;
+    text-shadow: 0 10px 20px #000;
+    box-shadow: 0 0 25px  rgba(46, 46, 49, .8);
+}
+
+header ul li:nth-child(1):hover {
+  font-size:77px;
+  padding: 78px; 
+  left:200px;
+  top:70px;
+  z-index:1;
+}
+header ul li:nth-child(2):hover {
+  font-size:66px;
+  padding: 52px;  
+  left:170px;
+  top:30px;
+  z-index: 1;
+}
+header ul li:nth-child(3):hover {
+  font-size:77px;
+  padding: 59px;  
+  left:-100px;
+  top:220px;
+  z-index:1;
+}
+header ul li:nth-child(4):hover {
+  font-size:65px;
+  padding: 45px;  
+  left:-160px;
+  top:180px;
+}
+header ul li:nth-child(5):hover {
+    font-size:65px;
+    padding: 45px;
+    left:-205px;
+    top:60px;
+}
+
+header.sticky {
+    padding: 20px 100px ;
+    background: rgba(0,0,0,.75);
+    box-sizing:border-box;
+    z-index: 100;
+}
+
+header.sticky ul {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+}
+
+header.sticky ul li {
+    position: relative;
+    list-style: none;
+    font-size:25px;
+    padding: 0;
+    left:0;
+    top:0;
+    background: transparent;
+    transition: 2.5s;
+    margin: 0 85px;
+    border-radius:0;
+    width:20px;
+    height:20px;
+    font-family: "Segoe UI Light" , monospace;
+    text-transform: capitalize;
+}
+header.sticky ul li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+header.sticky ul li:hover {
+    position: relative;
+    list-style: none;
+    font-size:20px;
+    padding: 0;
+    left:0;
+    top:0;
+    background: transparent;
+    transition: .3s;
+    margin: 0 85px;
+    border-radius:0;
+    width:20px;
+    height:20px;
+}
+
+.banner {
+    position: relative;
+    width:100% ;
+    height:800px ;
+    font-family: "Roboto Light", monospace;
+    background: url("U (6).jpg") no-repeat fixed center;
+    background-size: cover;
+}
+.jatin a{
+    font-size: 9rem;
+    color: #fff;
+    font-family: "Segoe UI Light" , monospace;
+    text-decoration: none;
+    letter-spacing: -9px;
+    font-weight: bolder;
+    position: absolute;
+    transform: translate(3.5rem,5rem);
+    text-shadow: 0 10px 20px #2e2e31, 0 20px 40px #2e2e31;
+    z-index: 1;
+}
+.jatin a h2 {
+    font-size: 5rem;
+    display: inline;
+    letter-spacing: -2px;
+}
+
+.jatin a:before,.jatin a:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    border: 15px solid red;
+    width: 100%;
+    padding: 6rem 2rem;
+    transform: translate(-5.5rem , -4.8rem);
+    left:3.5rem;
+    top: 5rem;
+    animation:  10s infinite alternate ease-in-out boxmove;
+}
+.jatin a:before{
+    border-color: #d9524a #d9524a rgba(0,0,0,0) rgba(0,0,0,0) ;
+    z-index: -1;
+}
+.jatin a:after {
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) #d9524a #d9524a;
+    box-shadow: 25px 25px 25px  rgba(46, 46, 49, .8);
+}
+@keyframes boxmove {
+    0%{
+    transform:   translate(-5.5rem , -4.8rem) rotate(0deg);
+    }
+    100%{
+    transform:  translate(-5.5rem , -4.8rem) rotate(15deg) ;
+    }
+}
+
+
+.socalfront {
+    margin: 0;
+    float: right;
+    transform: translate(-10rem ,34rem);
+}
+.socalfront a {
+    text-decoration: none;
+}
+.socalfront .fa {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    font-size: 3rem;
+    display: inline;
+    color: #000;
+    z-index: 100;
+    transition: .5s;
+}
+.socalfront .fa:hover {
+    font-size: 3.5rem;
+}
+.socalfront .fa-twitter:hover {
+    color: #00acee;
+}
+.socalfront .fa-facebook:hover {
+    color: #3b5998;
+}
+.socalfront .fa-instagram:hover {
+    color: #E1306C;
+}
+
+
+
+.line{
+
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid black;
+    width: 18ch;
+    font-size: 50px;
+    font-weight: bolder;
+    transform: translate(5px , 480px);
+    text-shadow: 0 4px 7px #2e2e31;
+
+}
+.anim-typewriter {
+    animation: type 2s steps(18) 2s 1 normal both,
+    blink 500ms steps(18) 9 forwards;
+}
+
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 18ch;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-right-color: rgba(0,0,0,0.75);
+    }
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+.lineagain{
+
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid black;
+    width: 18ch;
+    font-size: 35px;
+    font-weight: bold;
+    transform: translate(5px , 510px);
+    text-shadow: 0 4px 7px #2e2e31;
+}
+.anim-typewriteragain {
+    animation: type2 2s steps(18) 4s 1 normal both,
+    blink2 500ms steps(18) infinite forwards;
+}
+
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 11ch;
+    }
+}
+
+@keyframes blink2 {
+    0% {
+        border-right-color: rgba(0,0,0,0.75);
+    }
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+.aboutbackground {
+    background: url("N (10).jpg") no-repeat fixed center ;
+    height: 600px;
+    width: 100%;
+    background-size: 100%;
+    transform: translateY(-2.3rem);
+}
+
+
+
+
+.self {
+    position:absolute;
+    background:linear-gradient(225deg,black,#000,#000,#000,#151515,#232323,#343434 ,#8B8B8B ,#ffffff) ;
+    color:#ffffff;
+    border-radius:8px;
+    height:1250px;
+    padding-top: 0;
+    margin: 0;
+    width:600px;
+    font-size: 11.8rem;
+    font-family: "Roboto Light", monospace;
+    font-weight: bolder;
+    mix-blend-mode: multiply;
+    transform: translateX(20.75rem) translateY(-20.3rem) rotate(-90deg);
+}
+
+
+.self h3{
+    transform: translateX(0) translateY(-4rem) rotate(0deg);
+    text-align: center;
+}
+.myself {
+    font-size: 25px;
+    color:black;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: bold;
+    width: 430px;
+    transform: translateX(38rem) translateY(6rem) rotate(0deg);
+}
+.myself h2 {
+    font-size: 25px;
+    color:lightgray;
+    font-weight: lighter;
+    font-family: "Segoe UI Light" , monospace;
+}
+.myselflist {
+    font-family: "Segoe UI Light" , monospace;
+    list-style: none;
+    transform: translateX(0) translateY(3rem) rotate(0deg);
+}
+.myselflisteedit span:nth-child(1){
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.myselflisteedit span:nth-child(2) {
+    font-weight: normal;
+    text-align: initial;
+    display: block;
+    transform: translate(14rem ,-1.65rem);
+    font-size: 20px;
+    color: lightgray;
+}
+.education {
+    margin-top: 1rem;
+}
+.headings {
+    font-family: ".VnBlackH", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5rem;
+    background: url("G (4).gif");
+    background-size: auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    z-index: 10000;
+    transform: translateY(-8rem);
+}
+.heading {
+    text-align: center;
+    font-family: ".VnBlackH" ,sans-serif;
+    font-weight: bolder;
+    font-size: 6rem;
+    color: rgba(26, 26, 26,0.5);
+    transform: translateY(0) ;
+    z-index: -100;
+}
+.educationdata {
+    background: rgba(255,255,255,.6) ;
+    border-radius: 5rem;
+    width: 23rem;
+    height: 25rem;
+    font-family: "Calibri Light", sans-serif;
+    font-size: 1.25rem;
+    color: #343434;
+    margin-left: 2rem;
+    display: inline-table;
+    transform: translateY(-4rem);
+    box-shadow: 5px 5px 15px 10px rgba(0, 0,0,.8);
+    text-align: center;
+}
+
+
+.educationdata h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #008B8B;
+    font-family: "Impact" , monospace;
+    margin-bottom: 1rem;
+    text-shadow: 0 10px 20px #2e2e31, 0 20px 40px #2e2e31;
+}
+.educationdata h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.training {
+    margin-top: 10rem;
+    width: 1250px;
+    transform: translate(5px, 0);
+    height: 380px;
+    background: linear-gradient(0deg,rgba(0, 0, 0,0),rgba(0, 0, 0,.6),rgba(0, 0, 0,.6),rgba(0,0,0,.7),rgba(0, 0, 0,.9),#000000 );
+}
+.headings2 {
+    font-family: ".VnBlackH", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5rem;
+    background: url("G (4).gif");
+    background-size: auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    z-index: 10000;
+    transform: translateY(-8rem) ;
+}
+.heading2 {
+    text-align: center;
+    font-family: ".VnBlackH" ,sans-serif;
+    font-weight: bolder;
+    font-size: 6rem;
+    color: rgba(255,255,255,0.5);
+    transform: translateY(-.5rem);
+    z-index: -100;
+}
+.trainingdata {
+    background: linear-gradient(rgba(0,0,0,.95),rgba(0,0,0,.95),rgba(0,0,0,.95),rgba(0,0,0,0.009));
+    width: 23rem;
+    height: 25rem;
+    font-family: "Calibri Light", sans-serif;
+    font-size: 2.25rem;
+    color: lightgray;
+    margin-left: 2rem;
+    display: inline-table;
+    transform: translateY(-3rem);
+
+    text-align: center;
+
+}
+
+.trainingdata h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #ffedcc;
+    font-family: ".VnBlackH" , monospace;
+    margin-bottom: 1rem;
+    text-shadow: 0 10px 20px #2e2e31, 0 20px 40px #2e2e31;
+}
+.trainingdata h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: ".VnLucida sans", sans-serif;
+    color: #ffffff;
+    margin-top: 2rem;
+    text-align: center;
+}
+.trainingdata p {
+    color: lightgray;
+    font-weight: bolder;
+}
+.num {
+    color: navajowhite;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+.count {
+    font-family: "Impact" , monospace;
+    font-size: 4rem;
+    color: #ffbb33;
+    text-shadow: 0 10px 20px #2e2e31, 0 20px 40px #2e2e31;
+}
+.skills {
+    margin-top:15rem;
+    margin-left: 8rem;
+
+}
+.contaner {
+    transform: translateY(-7rem);
+}
+.progressdata h1 {
+    font-family: ".VnBlackH" , monospace;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #000;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+.pback {
+    background: lightgrey;
+    width: 900px;
+    height: 30px;
+    border-radius: 1rem;
+    -moz-border-radius-topleft: 1rem;
+    -moz-border-radius-bottomright: 1rem;
+}
+.pfront {
+    background: url("G5.gif") bottom;
+    background-size: auto;
+    border-radius: 1rem;
+    width: 0;
+    height: 30px;
+    -moz-border-radius-topleft: 1rem;
+    -moz-border-radius-bottomright: 1rem;
+    transition: 4s;
+}
+.pfront.show {
+    animation: progressbar 4s forwards;
+}
+@keyframes progressbar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 750px;
+    }
+}
+.pfront2 {
+    background: url("G5.gif") bottom;
+    background-size: auto;
+    border-radius: 1rem;
+    width: 0;
+    height: 30px;
+    -moz-border-radius-topleft: 1rem;
+    -moz-border-radius-bottomright: 1rem;
+    transition: 4s;
+}
+.pfront2.show {
+    animation: progressbar2 4s forwards;
+}
+@keyframes progressbar2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 200px;
+    }
+}.pfront3 {
+     background: url("G5.gif") bottom;
+     background-size: auto;
+     border-radius: 1rem;
+     width: 0;
+     height: 30px;
+     -moz-border-radius-topleft: 1rem;
+     -moz-border-radius-bottomright: 1rem;
+     transition: 4s;
+ }
+.pfront3.show {
+    animation: progressbar3 4s forwards;
+}
+@keyframes progressbar3 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 700px;
+    }
+}
+.pfront4 {
+    background: url("G5.gif") bottom;
+    background-size: auto;
+    border-radius: 1rem;
+    width: 0;
+    height: 30px;
+    -moz-border-radius-topleft: 1rem;
+    -moz-border-radius-bottomright: 1rem;
+    transition: 4s;
+}
+.pfront4.show {
+    animation: progressbar4 4s forwards;
+}
+@keyframes progressbar4 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 300px;
+    }
+}
+.contact {
+    width: 100%;
+    height: 30rem;
+    background: rgba(0,0,0,.2);
+    display:flex;
+    font-family: "Segoe UI Light" , monospace;
+    backdrop-filter: blur(20px);
+}
+.contacthead {
+    font-size: 8rem;
+    color: #fff;
+    font-family: "Roboto Light", monospace;
+    font-weight: bolder;
+    transform: translateX(12.5rem) translateY(0rem) rotate(-90deg) scaleY(1.2);
+}
+.contactcontaner {
+    width: 45rem;
+    height: 27rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 10px rgba(26,26,26,.7);
+    padding:0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+    transform: translate(-10rem ,-1rem);
+    font-family: "Segoe UI Light" , monospace;
+}
+
+.Cleft {
+    background: url("C (1).jpg") no-repeat;
+    background-size: 180%;
+}
+.Cright {
+    background: ghostwhite;
+    padding: 25px 15px;
+}
+
+.Cright h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #2ecc71;
+    padding: 0;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    text-align: center;
+}
+.Cright h2 {
+    padding-bottom: .5rem;
+}
+
+.field {
+    font-size: 1.2rem;
+    font-family: "Segoe UI Light" , monospace;
+    background: rgba(230,230,230,.9);
+    color: #151515;
+    font-weight: lighter;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(0,0,0,0);
+    padding: .5rem .5rem;
+    transition: .3s;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+.field:hover {
+    background: rgba(0,0,0,0.15);
+}
+.field:focus {
+    background: ghostwhite;
+    border: 1px solid rgba(30,85,250,.47);
+}
+.area {
+    min-height: 78px;
+}
+.btn {
+    width:100%;
+    padding: 0.5rem 0.5rem;
+    font-family: "Segoe UI Light" , monospace;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #2ecc71;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 0;
+}
+.btn:hover {
+    background: #27ae60;
+}
+footer {
+    background: #000;
+    color: lightgrey;
+    font-family: "Segoe UI Light" , monospace;
+    margin-top: 0;
+    position: relative;
+    bottom: 0;
+}
+.footercontaner {
+    display: flex;
+}
+.footerdata {
+    padding: 1rem;
+    flex-basis: 55rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+.footerdata ul {
+    list-style: none;
+}
+.footerdata ul li {
+    padding-bottom:.5rem ;
+}
+.footerdata ul li .fa {
+    font-size: 1.4rem;
+    color: darkgray;
+}
+.Ftext{
+    font-size: 1rem;
+    font-weight: bolder;
+    display: block;
+    transform: translate(0 , -1.4rem);
+    padding-left: 2.5rem;
+    transition: .3s;
+}
+.footerdata ul li:nth-child(2) span:hover  {
+    cursor: pointer;
+    color: #fff;
+}
+.footerdata ul li:nth-child(3) span:hover  {
+    cursor: pointer;
+    color: #fff;
+}
+.icon {
+    font-size: 2rem;
+    color: lightgrey;
+    margin-right:.5rem;
+}
+.fcontact .fa {
+    margin-top: 4rem;
+    padding-right: 2rem;
+}
+.fcontact a {
+    font-size: 2rem;
+    color: gray;
+    padding-right:.5rem;
+    padding-top: 2rem;
+    transition: .3s;
+}
+.fcontact a:hover {
+    color: #fff;
+}
+.copyright {
+    padding: 1rem;
+    text-align: center;
+}
+.copyright h2 {
+    font-weight: bold;
+    display: inline;
+    font-size: 1rem;
+}
+.copyright h2 {
+    font-weight: lighter;
+    display: inline;
+    font-size: .9rem;
+}
+/* -----------------------------scroll bar------------------------------- */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 2px 2px 2px #000;
+    border-radius: 10px;
+    background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: url("G (5).gif");
+    border-radius: 10px;
+    border: 1.5px solid #fff;
+    transition: .9s;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg,#000,#fff);
+}
